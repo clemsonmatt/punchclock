@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>PUNCHCLOCK</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/button.css">
+
+        <script>
+            var days        = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+            var months      = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+            var currentDate = new Date();
+        </script>
+    </head>
+    <body>
+        <div class="alert-invalid" id="js-invalid-login" style="display: none;">
+            Error: Invalid passcode
+        </div>
+        <div class="alert-success" id="js-success-login" style="display: none;">
+            Success: Timecard punched
+        </div>
+        <div class="row" style="margin-top: 35px;">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="clock">
+                    <table>
+                        <tr>
+                            <td class="clock-td">
+                                <div class="clock-detail">
+                                    <span id="js-hour"></span>
+                                </div>
+                            </td>
+                            <td class="clock-td">
+                                <div class="clock-detail">
+                                    <span id="js-min"></span>
+                                </div>
+                            </td>
+                            <td class="clock-td">
+                                <div class="clock-detail">
+                                    <span id="js-sec"></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style=" margin-top: -75px; background-color: #253447; width: 100%; height: 2px;"></div>
+                </div>
+                <h1 style="font-weight: 200; text-align: center; color: #253447; letter-spacing: 5px; margin: 5px 0px 0px 0px; font-size: 45px;">
+                    <script>document.write(days[currentDate.getDay()])</script>
+                </h1>
+                <h3 style="font-weight: 200; text-align: center; color: #253447; letter-spacing: 3px; margin: 0px;">
+                    <script>document.write(months[currentDate.getMonth()] + ' ' + currentDate.getDate())</script>
+                </h3>
+            </div>
+        </div>
+
+        <div class="row" style="margin: 35px 15px;">
+            <div class="col-sm-8">
+                <div class="input-code" data-code="">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="input-code-detail">
+                                <span class="js-input-code" id="js-input-code-1">
+                                    •
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="input-code-detail">
+                                <span class="js-input-code" id="js-input-code-2">
+                                    •
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="input-code-detail">
+                                <span class="js-input-code" id="js-input-code-3">
+                                    •
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="input-code-detail">
+                                <span class="js-input-code" id="js-input-code-4">
+                                    •
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-sm-4 text-center">
+                        <button class="btn btn-number" data-value="1">
+                            1
+                        </button>
+                        <button class="btn btn-number" data-value="4">
+                            4
+                        </button>
+                        <button class="btn btn-number" data-value="7">
+                            7
+                        </button>
+                        <button class="btn btn-number" data-value="clear">
+                            CLEAR
+                        </button>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <button class="btn btn-number" data-value="2">
+                            2
+                        </button>
+                        <button class="btn btn-number" data-value="5">
+                            5
+                        </button>
+                        <button class="btn btn-number" data-value="8">
+                            8
+                        </button>
+                        <button class="btn btn-number" data-value="0">
+                            0
+                        </button>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <button class="btn btn-number" data-value="3">
+                            3
+                        </button>
+                        <button class="btn btn-number" data-value="6">
+                            6
+                        </button>
+                        <button class="btn btn-number" data-value="9">
+                            9
+                        </button>
+                        <button class="btn btn-number" data-value="delete">
+                            <—
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <center>
+                    <div class="row" style="margin-bottom: 35px;">
+                        <div class="col-sm-12">
+                            <button class="btn-round btn-round-success-simple js-action-button">
+                                IN
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 35px;">
+                        <div class="col-sm-12">
+                            <button class="btn-round btn-round-warning-simple js-action-button">
+                                OUT
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button class="btn-round btn-round-default js-action-button">
+                                MOVE
+                            </button>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+
+        <script>window.$ = window.jQuery = require('./assets/js/jquery-3.1.0.min.js');</script>
+        <script>require('./assets/js/index.js')</script>
+        <script>require('./assets/js/punch.js')</script>
+    </body>
+</html>

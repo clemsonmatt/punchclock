@@ -1,0 +1,152 @@
+/**
+ * Number Buttons
+ */
+.btn-number {
+    background-color: #253447;
+    width: 100%;
+    height: 75px;
+    font-size: 2.5em;
+    color: #D6D8D9;
+    border-radius: 4px;
+    padding-top: 5px;
+    font-weight: 100;
+    margin-top: 10px;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+.btn-number:hover,
+.btn-number:focus,
+.btn-number:focus:active {
+    color: #D6D8D9;
+    outline: none;
+}
+.btn-number:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s;
+}
+.btn-number:active:after {
+    transform: scale(0, 0);
+    opacity: .2;
+    transition: 0s;
+}
+
+
+/**
+ * Round Buttons
+ */
+.btn-round {
+    width: 125px;
+    height: 125px;
+    line-height: 110px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background: #2196f3;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    transition: box-shadow 0.2s ease-in-out;
+    font-size: 28px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    border: none;
+}
+.btn-round:focus {
+    outline: none;
+}
+.btn-round:after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 90%;
+    top: -100px;
+    left: 8px;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s;
+}
+.btn-round:active:after {
+    transform: scale(0, 0);
+    opacity: .2;
+    transition: 0s;
+}
+.btn-round:disabled {
+    color: #999 !important;
+    border-color: #999;
+    background-color: #6d7d8c;
+}
+.btn-round-sm {
+    width: 25px;
+    height: 25px;
+    line-height: 35px;
+    font-size: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 8px 0 rgba(0,0,0,0.12);
+}
+
+.btn-round-md {
+    width: 35px;
+    height: 35px;
+    line-height: 40px;
+    font-size: 15px;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.16),0 3px 10px 0 rgba(0,0,0,0.12);
+}
+
+.btn-round-primary {
+    color: #D6D8D9;
+    background: #4598BF;
+}
+
+.btn-round-default {
+    color: #4598BF;
+    border: 6px solid #4598BF;
+    background: #4d5d6c;
+}
+
+.btn-round-danger {
+    color: #ffffff;
+    background-color: #e51c23;
+}
+.btn-round-danger-simple {
+    color: #e51c23 !important;
+    border: 2px solid #e51c23;
+    background-color: #253447;
+}
+
+.btn-round-success {
+    color: #ffffff;
+    background-color: #4caf50;
+}
+.btn-round-success-simple {
+    color: #4caf50 !important;
+    border: 6px solid #4caf50;
+    background-color: #4d5d6c;
+}
+
+.btn-round-warning {
+    color: #fff;
+    background-color: #ff9800;
+}
+.btn-round-warning-simple {
+    color: #ff9800 !important;
+    border: 6px solid #ff9800;
+    background-color: #4d5d6c;
+}

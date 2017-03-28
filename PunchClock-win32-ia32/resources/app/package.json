@@ -1,0 +1,21 @@
+{
+  "name": "punchclock",
+  "productName": "PunchClock",
+  "description": "",
+  "version": "1.0.0",
+  "author": "Ellis",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "dependencies": {
+    "electron-debug": "^1.0.0",
+    "mysql":          "^2.13.0"
+  },
+  "devDependencies": {
+    "electron": "^1.4.15",
+    "electron-packager": "^8.6.0"
+  }
+}
