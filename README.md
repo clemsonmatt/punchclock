@@ -19,4 +19,5 @@ Add a table `people` with a field named `passcode` which contains a 4 digit nume
 
 ### Windows Download
 [PunchClock-win32-ia32.zip](https://github.com/clemsonmatt/punchclock/raw/master/PunchClock-win32-ia32.zip)
+
 [PunchClock-win32-x64.zip](https://github.com/clemsonmatt/punchclock/raw/master/PunchClock-win32-x64.zip)
