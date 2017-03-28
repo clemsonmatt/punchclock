@@ -1,4 +1,4 @@
-# PunchClock app
+# PunchClock Electron App
 
 ## Requirements
 ### MySql
@@ -7,7 +7,7 @@ Database config:
 host     : 'localhost',
 user     : 'matte',
 password : 'password',
-database : ‘punchclock'
+database : 'punchclock'
 ```
 Add a table `people` with a field named `passcode` which contains a 4 digit numeric code.
 
